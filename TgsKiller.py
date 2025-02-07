@@ -9,24 +9,24 @@ logger = logging.getLogger(__name__)
 
 @loader.tds
 class TgsKillerMod(loader.Module):
-	"""Хуярит"""  
+	"""Dick"""  
 	strings = {"name": "TgsKiller"}
 
 
 	@loader.unrestricted
 	async def tgscmd(self, message):
-		"""хуярит стикеры"""
+		"""huyarit stickers """
 		reply = await message.get_reply_message()
 		if not reply:
-			await message.edit("Реплай на стикер анимированный")
+			await message.edit("Reflave to an animated sticker")
 			return
 		if not reply.file:
-			await message.edit("Реплай на стикер анимированный")
+			await message.edit("Reflave to an animated sticker")
 			return
 		if not reply.file.name.endswith(".tgs"):
-			await message.edit("Реплай на стикер анимированный")
+			await message.edit("Reflave to an animated sticker")
 			return
-		await message.edit("///Пахуярили нахуй!///")
+		await message.edit("///Pahuyariyi fucking!///")
 		await reply.download_media("tgs.tgs")
 		os.system("lottie_convert.py tgs.tgs json.json")
 		with open("json.json","r") as f:
